@@ -1,4 +1,9 @@
 div{
-    background-color: rgb(141, 192, 124);
+    background-color: rebeccapurple
     
+}
+
+app-social{
+    float: right;
+    margin-top: 25px;
 }
