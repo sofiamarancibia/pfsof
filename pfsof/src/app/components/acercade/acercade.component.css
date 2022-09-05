@@ -1,10 +1,11 @@
 .row{
     padding: 20px;
-}
-div{
-    background-color: rgb(203, 168, 238)
-    text-align center;
-}
+    
+        background-color: rgb(203, 168, 238)
+        text-align center;
+    }
+
+
 
 @media (min-width: 576px)
 {
