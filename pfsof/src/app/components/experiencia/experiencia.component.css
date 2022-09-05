@@ -3,10 +3,17 @@
 }
 
 div{
-background-color: rgb(199, 164, 233);
+background-color: rosybrown;
 
 }
 
 h1,h3 {
     display: inline;
+}
+
+h2{
+    font-weight: bolder;
+    font-size: 40px;
+    color: rgb(107, 101, 101);
+    text-align: center;
 }
