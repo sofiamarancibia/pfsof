@@ -5,8 +5,18 @@ div{
     background-color: rgb(203, 168, 238)
     text-align center;
 }
+
+@media (min-width: 576px)
+{
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 5%;
+    }
+}
 #nombre{
     font-weight: bold;
-    margin-top:40%;
-    margin-left: 10xp;
+    margin-top:30%;
 }
