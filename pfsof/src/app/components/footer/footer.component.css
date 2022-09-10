@@ -1,0 +1,8 @@
+.row{
+    background-color: rosybrown;
+}
+footer{
+    color: #fefefe;
+    font-size: 14px;
+    display: flex;
+}
