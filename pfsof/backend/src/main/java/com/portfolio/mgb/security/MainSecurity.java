@@ -38,15 +38,24 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
 }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
-         http.cors().and().csrf().disable().authorizeHttpRequests()
-                 .antMatchers("/auth**").permitAll()
-                 .anyRequest().authenticated()
-                 .and().
-                 exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
-                 .and()
-                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+            .antMatchers("**").permitAll()
+            .anyRequest()
+            .authenticated()
+            .and()
+            .cors()
+            .and()
+            .exceptionHandling()
+.authenticationEntryPoint(jwtEntryPoint)
+            .and()
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            .and()
+            .csrf()
+            .disable();
+        http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+        
     }
 
     @Override

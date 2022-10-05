@@ -10,5 +10,5 @@ package com.portfolio.mgb.security.Enums;
  * @author SOFIA
  */
 public enum RolNombre {
-    ROLE_ADMIN, ROLE_USER
+    ROL_ADMIN, ROL_USER
 }
