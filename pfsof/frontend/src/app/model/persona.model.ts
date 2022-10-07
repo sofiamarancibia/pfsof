@@ -3,6 +3,7 @@ export class persona
     id?:number;
     nombre: String;
     apellido: string;
+    nombreUsuario!: string;
     img: string;
 
 

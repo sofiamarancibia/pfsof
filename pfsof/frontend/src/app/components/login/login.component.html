@@ -27,8 +27,8 @@
 
 
 
-
-              <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                  
+              <form name="ngForm" (ngSubmit)="onLogin()" novalidate>
                 <div class="form-outline form-white mb-4">
                   <input
                     type="email"
@@ -49,7 +49,7 @@
                   >
                 </div>
                 <div class="pt-1 mb-4">
-                  <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                  <button name= "login"  type="button">Login</button>
                 </div>
   </form>
     
