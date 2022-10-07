@@ -72,7 +72,7 @@ public class AuthController {
         return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);
     }
 
-    @PostMapping("/auth/login")
+    @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Campus mal puesto"), HttpStatus.BAD_REQUEST);

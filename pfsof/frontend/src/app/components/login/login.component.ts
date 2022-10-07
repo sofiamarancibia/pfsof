@@ -12,11 +12,11 @@ import { TokenService } from 'src/app/service/token.service';
 export class LoginComponent implements OnInit {
 isLogged= false;
 isLogginFail = false;
-LoginUsuario!: LoginUsuario;
+loginUsuario!: LoginUsuario;
 nombreUsuario!: string;
 password!: string;
 roles: string [] = [];
-errMsj!: String;
+errMsj!: string;
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
@@ -28,9 +28,9 @@ errMsj!: String;
     }
   }
 onLogin(): void{
-  this.LoginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+  this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
    this.authService
-    .login(this.LoginUsuario).subscribe(data =>{
+    .login(this.loginUsuario).subscribe(data =>{
       this.isLogged= true;
       this.isLogginFail = false;
       this.tokenService.setToken(data.token);
