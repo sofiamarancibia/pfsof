@@ -17,8 +17,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { interceptorProvider } from './service/interceptor-service';
     AppRoutingModule, 
     NgCircleProgressModule.forRoot({}),
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [interceptorProvider],
