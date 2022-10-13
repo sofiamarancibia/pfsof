@@ -21,7 +21,7 @@ export class LogoApComponent implements OnInit {
   }
 
   onLogOut():void{
-    this.tokenService.LogOut();
+    this.tokenService.logOut();
     window.location.reload();
   }
 

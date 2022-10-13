@@ -27,15 +27,14 @@ errMsj!: string;
       this.roles = this.tokenService.getAuthorities();
     }
   }
-onLogin(): void{
+/*onLogin(): void{
   this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-   this.authService
-    .login(this.loginUsuario).subscribe(data =>{
+   this.authService.login(this.loginUsuario).subscribe(data =>{
       this.isLogged= true;
       this.isLogginFail = false;
       this.tokenService.setToken(data.token);
       this.tokenService.setUserName(data.nombreUsuario);
-      this.tokenService.setAuthotities(data.authorities);
+      this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;
       this.router.navigate(['']);
     }, err =>{
@@ -46,5 +45,27 @@ onLogin(): void{
 
     }
       )
+}*/
+public onLogin(): void {
+ 
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+
+    this.authService.login(this.loginUsuario).subscribe(
+      (data) => {
+        this.isLogged = true;
+        this.isLogginFail = false;
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles = data.authorities;
+        this.router.navigate(['']);
+      },
+      (err) => {
+        this.isLogged = false;
+        this.isLogginFail = true;
+        this.errMsj = 'Credenciales Incorrectas';
+      }
+    );
+  }
 }
-}
+//this.router.navigate(['']);
