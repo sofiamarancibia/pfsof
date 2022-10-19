@@ -3,96 +3,32 @@
         EDUCACION
     </h2>
     
-    <div class="col-lg-1" ></div>
-    <div class="col-lg-11" ></div>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                Agregar Educacion
+            </button>
+        </div>
     
-    <br>
-    <br>
-    <br>
-    <br>
-       
-        <ul>
-            <li>
-               <h3>Titulo Secundario - Escuela y Liceo Vocacional Sarmiento -  </h3> -<h3> (2006-2011) </h3>
-    
-            </li>
-            <br>
-            <br>
-            <p>
-                "Tecnica en Gestion Economica Juridica contable" 
-            </p>
-    
-        </ul>
-        <br>
-        <br>
-        <br>
-        <br>
-        <ul>
-            <li>
-               <h3>"Ingeneria Electronica"- Facultad Regional Tucuman </h3> -<h3> (2019-Actualidad) </h3>
-    
-            </li>
-            <br>
-            <br>
-            <p>
-                Estudios en curso.
-            </p>
-    
-        </ul>
-    
-        <br>
-        <br>
-        <br>
-        <br>
-        <ul>
-            <li>
-               <h3>"Tecnicatura Superior en Programacion"- Facultad Regional Tucuman </h3> -<h3> (2022-Actualidad) </h3>
-    
-            </li>
-            <br>
-            <br>
-            <p>
-                Estudios en curso.
-            </p>
-    
-        </ul>
-
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <ul>
-            <li>
-               <h3>"Programador Junior"- Beca Fundacion Leon </h3> -<h3> (2022-Actualidad) </h3>
-    
-            </li>
-            <br>
-            <br>
-            <p>
-                Estudios en curso.
-            </p>
-    
-        </ul>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <ul>
-            <li>
-               <h3>"Programador Web Full stack Junior"- Beca Argentina Programa</h3> -<h3> (2022-Actualidad) </h3>
-    
-            </li>
-            <br>
-            <br>
-            <p>
-                Estudios en curso.
-            </p>
-    
-        </ul>
-    
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     
     </div>
-    
-    
