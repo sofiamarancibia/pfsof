@@ -9,7 +9,8 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
  // URL = 'https://sofiamarancibia.herokuapp.com/explab/';
- URL= 'http://localhost:8080/explab'
+ //URL= 'http://localhost:8080/explab'
+ URL = 'https://sofiamarancibia.herokuapp.com/explab';
 
   constructor(private httpClient: HttpClient) { }
 

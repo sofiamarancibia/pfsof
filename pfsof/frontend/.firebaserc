@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "frontendsof"
-  }
+    "default": "sofiafrontend",
+    "sofiamarancibia": "sofiamarancibia1-72600"
+  },
+  "targets": {},
+  "etags": {}
 }
