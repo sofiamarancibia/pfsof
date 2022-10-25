@@ -11,8 +11,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-URL = 'https://bknprueba1.herokuapp.com/auth/';
-
+//URL = 'https://sofiamarancibia.herokuapp.com/auth/';
+URL= 'http://localhost:8080/auth/'
   constructor(private httpClient: HttpClient) { }
 
  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

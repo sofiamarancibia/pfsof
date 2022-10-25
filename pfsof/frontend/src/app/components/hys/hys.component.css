@@ -1,8 +1,8 @@
 .row{
-    background-color: rosybrown;
     padding: 20px;
+    background-color: rosybrown;
 }
-h2{
-    font-weight: bolder;
-    color: rgb(107, 101, 101);
+
+h1, h3{
+    display: inline;
 }
