@@ -8,7 +8,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent implements OnInit {
-persona: persona = new persona("","","");
+persona: persona = new persona("Sofia Marine","Arancibia","");
 
 constructor(public personaService: PersonaService){
 
@@ -16,7 +16,8 @@ constructor(public personaService: PersonaService){
 
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data =>{this.persona=data})
+
   }
+
 
 }

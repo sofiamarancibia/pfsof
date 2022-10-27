@@ -8,4 +8,5 @@ footer{
     flex-direction: column;
     text-align: center;
     box-shadow: 2px -2px 5px #9999;
+    padding-top: 50px;
 }

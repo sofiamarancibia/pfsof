@@ -1,6 +1,7 @@
 .row{
     background-color: rosybrown;
     padding: 20px;
+    
 }
 .contenedor{
     width: auto;
@@ -11,7 +12,7 @@
 }
 h2{
 font-weight: bolder;
-color: rgb(107, 101, 101);
+padding-top: 35px;
 }
 .img-proyecto{
     box-shadow: 10px 10px 5px #000000;

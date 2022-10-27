@@ -1,8 +1,44 @@
 .row{
-    padding: 20px;
+   padding: 20px;
     background-color: rosybrown;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+   
+}
+div{
+    margin-left: 1%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    padding: 5px;
+    justify-items: left;
+    align-items: center;
+    
 }
 
 h1, h3{
     display: inline;
+}
+.circle-progress{
+    display: flex;
+    flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  font-display: bold;
+  text-align: justify;
+
+}
+
+.btn-danger{
+    
+   padding: 8px 20px 8px 20px;
+}
+.btn-light{
+    padding: 8px 20px 8px 20px;
+    margin-left: 80px;
+  
 }
